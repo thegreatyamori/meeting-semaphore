@@ -2,5 +2,9 @@
   "name": "semaphore",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "minimist": "^1.2.8"
+  }
 }
