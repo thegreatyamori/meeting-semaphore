@@ -3,7 +3,12 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "minify": "bash ./node_modules/.bin/rollup -c"
+    "minify": "bash ./node_modules/.bin/rollup -c",
+    "compile": "bash ./node_modules/.bin/pkg semaphore.min.js --target host --compress GZip --out-path dist -d",
+    "build": "npm run minify && npm run compile"
+  },
+  "pkg": {
+    "assets": "node_modules/**/*"
   },
   "dependencies": {
     "minimist": "^1.2.8",
@@ -12,6 +17,7 @@
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.2.1",
     "@rollup/plugin-terser": "^0.4.3",
+    "pkg": "^5.8.1",
     "rollup": "^3.29.3"
   }
 }
