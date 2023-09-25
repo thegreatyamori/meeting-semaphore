@@ -15,6 +15,7 @@ npm version $version --no-git-tag-version --prefix $path
 
 git add .
 git commit -m "release tag $version"
-git tag $version -m $message
+git tag $version -m "$message"
 git push origin $version
+git push origin main
 echo "New version available: $version"
