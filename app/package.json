@@ -5,6 +5,7 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "minimist": "^1.2.8"
+    "minimist": "^1.2.8",
+    "rage-edit": "^1.2.0"
   }
 }
